@@ -43,6 +43,7 @@ public class main extends javax.swing.JFrame {
         jPanel3 = new javax.swing.JPanel();
         lblKey = new javax.swing.JLabel();
         barProg = new javax.swing.JProgressBar();
+        jTextField1 = new javax.swing.JTextField();
         jScrollPane2 = new javax.swing.JScrollPane();
         txtArea = new javax.swing.JTextArea();
 
@@ -116,6 +117,14 @@ public class main extends javax.swing.JFrame {
         barProg.setPreferredSize(new java.awt.Dimension(300, 20));
         jPanel3.add(barProg);
 
+        jTextField1.setText("This is a textBox");
+        jTextField1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextField1KeyTyped(evt);
+            }
+        });
+        jPanel3.add(jTextField1);
+
         getContentPane().add(jPanel3, java.awt.BorderLayout.PAGE_END);
 
         txtArea.setColumns(20);
@@ -179,6 +188,10 @@ public class main extends javax.swing.JFrame {
         //Längeden säts i ProgressBar
         barProg.setValue(value);
     }//GEN-LAST:event_txtAreaKeyTyped
+
+    private void jTextField1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField1KeyTyped
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1KeyTyped
 
     private void ChangeColor (ItemEvent evt) {
         //Vi skapar en referense till den ComboBox som gjorde anroppet.
@@ -253,6 +266,7 @@ public class main extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JSlider jSlider1;
+    private javax.swing.JTextField jTextField1;
     private javax.swing.JLabel lblKey;
     private javax.swing.JLabel lblSlider;
     private javax.swing.JList<String> listKurs;
