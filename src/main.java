@@ -43,6 +43,7 @@ public class main extends javax.swing.JFrame {
         jPanel3 = new javax.swing.JPanel();
         lblKey = new javax.swing.JLabel();
         barProg = new javax.swing.JProgressBar();
+        jButton1 = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         txtArea = new javax.swing.JTextArea();
 
@@ -116,6 +117,14 @@ public class main extends javax.swing.JFrame {
         barProg.setPreferredSize(new java.awt.Dimension(300, 20));
         jPanel3.add(barProg);
 
+        jButton1.setText("Click me");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanel3.add(jButton1);
+
         getContentPane().add(jPanel3, java.awt.BorderLayout.PAGE_END);
 
         txtArea.setColumns(20);
@@ -179,6 +188,11 @@ public class main extends javax.swing.JFrame {
         //Längeden säts i ProgressBar
         barProg.setValue(value);
     }//GEN-LAST:event_txtAreaKeyTyped
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        JOptionPane.showMessageDialog(null, "Hello world");
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     private void ChangeColor (ItemEvent evt) {
         //Vi skapar en referense till den ComboBox som gjorde anroppet.
@@ -247,6 +261,7 @@ public class main extends javax.swing.JFrame {
     private javax.swing.JButton btnMouse;
     private javax.swing.JComboBox<String> comboColor;
     private javax.swing.JComboBox<String> comboColor2;
+    private javax.swing.JButton jButton1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
